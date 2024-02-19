@@ -29,8 +29,10 @@ class OpenSpacePublisher(Node):
         self.angle_of_longest_range = msg.angle_min + max_range_index * angle_increment
 
     def publish_data(self):
+        print("we are publishing now")
         if self.longest_range is not None and self.angle_of_longest_range is not None:
             distance_msg = Float32()
+            print("self.longest_range is: ", self.longest_range)
             distance_msg.data = self.longest_range
             self.publisher_distance.publish(distance_msg)
 
