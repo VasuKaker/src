@@ -34,6 +34,7 @@ class OpenSpacePublisher(Node):
             distance_msg = Float32()
             print("self.longest_range is: ", self.longest_range)
             distance_msg.data = self.longest_range
+            print("just before the .publish line")
             self.publisher_distance.publish(distance_msg)
             print("distance message published")
 
