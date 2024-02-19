@@ -32,7 +32,8 @@ class FakeScanPublisher(Node):
         msg.ranges = [float(random.uniform(1.0, 10.0)) for _ in range(num_measurements)]
 
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing fake scan data')
+        self.get_logger().info('Publishing fake scan data: ')
+
 
 def main(args=None):
     rclpy.init(args=args)

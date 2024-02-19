@@ -20,7 +20,9 @@ class OpenSpacePublisher(Node):
         self.angle_of_longest_range = None
 
     def listener_callback(self, msg):
+        print("we made it here")
         ranges = np.array(msg.ranges)
+        print("we made it here 2")
         max_range_index = np.argmax(ranges)
         self.longest_range = ranges[max_range_index]
         angle_increment = msg.angle_increment
