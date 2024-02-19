@@ -22,9 +22,8 @@ setup(
         'console_scripts': [
                 'simple_publisher = ros_exercises.simple_publisher:main',
                 'simple_subscriber = ros_exercises.simple_subscriber:main',
-                ' = ros_exercisefake_scan_publishers.fake_scan_publisher:main'
+                'fake_scan_publisher = ros_exercise.fake_scan_publisher:main',
+                'open_space_publisher = ros_exercise.open_space_publisher:main'
         ],
     },
 )
-
-
