@@ -1,7 +1,8 @@
 import rclpy
 from rclpy.node import Node
 
-from std_msgs.msg import LaserScan
+# from std_msgs.msg import LaserScan
+from sensor_msgs.msg import LaserScan
 import random
 
 
