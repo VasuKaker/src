@@ -33,6 +33,7 @@ class OpenSpacePublisher(Node):
         if self.longest_range is not None and self.angle_of_longest_range is not None:
             distance_msg = Float32()
             print("self.longest_range is: ", self.longest_range)
+            print("type(self.longest_range is) : ", type(self.longest_range))
             distance_msg.data = self.longest_range
             print("just before the .publish line")
             self.publisher_distance.publish(distance_msg)
