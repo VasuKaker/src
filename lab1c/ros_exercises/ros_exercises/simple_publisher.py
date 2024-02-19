@@ -19,7 +19,7 @@ class MinimalPublisher(Node):
         msg.data = self.i
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i = random.randint(0, 10)
+        self.i = float(random.randint(0, 10))
 
 
 def main(args=None):
