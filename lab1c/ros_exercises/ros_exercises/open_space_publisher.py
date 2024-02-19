@@ -35,11 +35,12 @@ class OpenSpacePublisher(Node):
             print("self.longest_range is: ", self.longest_range)
             distance_msg.data = self.longest_range
             self.publisher_distance.publish(distance_msg)
+            print("distance message published")
 
             angle_msg = Float32()
             angle_msg.data = self.angle_of_longest_range
             self.publisher_angle.publish(angle_msg)
-
+            print("publisher angle published ")
             # Log the published data
             self.get_logger().info(f'Longest Range: {self.longest_range}, Angle: {self.angle_of_longest_range}')
 
