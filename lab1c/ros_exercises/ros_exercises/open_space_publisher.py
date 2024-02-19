@@ -24,9 +24,9 @@ class OpenSpacePublisher(Node):
         ranges = np.array(msg.ranges)
         print("we made it here 2")
         max_range_index = np.argmax(ranges)
-        self.longest_range = ranges[max_range_index]
+        self.longest_range = float(ranges[max_range_index])
         angle_increment = msg.angle_increment
-        self.angle_of_longest_range = msg.angle_min + max_range_index * angle_increment
+        self.angle_of_longest_range = float(msg.angle_min + max_range_index * angle_increment)
 
     def publish_data(self):
         print("we are publishing now")
