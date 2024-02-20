@@ -19,6 +19,8 @@ class MinimalSubscriber(Node):
         self.get_logger().info('I heard: "%s"' % msg.data)
         msg_two = Float32()
         msg_two.data = np.log(msg.data)
+        if not ((0 < msg_two.data) & (msg_two.data < 10)):
+            msg_two.data = float(1.0)
         self.publisher_.publish(msg_two)
 
 def main(args=None):
